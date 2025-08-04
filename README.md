@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ChatGPT generated checklist of factors to take into account during production.
+(I will check off the ones that've been planned or executed)
 
-## Getting Started
+✅ Essentials
+✓ Domain Name 
 
-First, run the development server:
+✓ Buy from: Namecheap, Google Domains, GoDaddy, etc.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+✓ Web Hosting
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✓ Options: Shared (e.g., Bluehost), VPS (e.g., Linode), Cloud (e.g., AWS, Vercel, Netlify for static sites)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+🔐 Security & Privacy
+✓ SSL Certificate
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Free with many hosts (e.g., Let’s Encrypt)
 
-## Learn More
+- Makes your site HTTPS (important for trust & SEO)
 
-To learn more about Next.js, take a look at the following resources:
+- Privacy Policy & Terms (if collecting user data)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Legally required in many regions (especially with forms, cookies, analytics, etc.)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🛠️ Development Tools
+Content Management System (CMS) (optional)
 
-## Deploy on Vercel
+WordPress, Ghost, or custom CMS if not coding from scratch
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Version Control (Git)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Use GitHub or GitLab to manage your code
+
+📈 Functionality Add-ons
+✓ Email Service
+
+For contact forms or newsletters (e.g., Google Workspace, Zoho Mail, Mailgun)
+
+Analytics
+
+Google Analytics, Plausible, or Matomo
+
+SEO Tools
+
+Meta tags, Open Graph, sitemap.xml, robots.txt
+
+Performance Optimization
+
+Image compression, lazy loading, caching (e.g., Cloudflare CDN)
+
+🧪 Testing & Maintenance
+Browser & Mobile Testing
+
+Test in Chrome, Safari, Firefox, Edge + mobile responsiveness
+
+Backup System
+
+Regular backups (some hosts offer this, or use external tools)
+
+Monitoring & Uptime Alerts
+
+Tools like UptimeRobot or StatusCake
+
+📢 Launch & Promotion
+Social Media Links & Sharing Setup
+
+Open Graph tags, share buttons
+
+Search Engine Submission
+
+Submit to Google Search Console and Bing Webmaster Tools
