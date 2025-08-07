@@ -1,13 +1,75 @@
 @import "tailwindcss";
 
+/* 
+FOR OSU COLOR USAGE https://bux.osu.edu/color/primary-colors/
+  Dos
+  -Reserve scarlet for calls-to-action, whenever possible
+  -Use white or gray tints as background colors
+  -Use gray shades for legibility of text and to meet accessibility contrast requirements
+  Don’ts
+  -Don’t use tints of scarlet (colors lighter than scarlet)
+  -Don’t use accent colors for decorative purposes
+  -Don’t use accent colors as a predominant color or primary way to identify a unit
+
+*/
+
 :root {
   --background: #171717;
   --foreground: #ffffff;
+
+  /* OSU Scarlet */
+  --scarlet: #BA0C2F;
+
+  /* OSU Scarlet Shades */
+  --scarlet-dark-40: #70071C;
+  --scarlet-dark-60: #4A0513;
+
+  /* OSU Gray */
+  --gray: #A7B1B7;
+
+  /* OSU Gray Tints */
+  --gray-light-20: #BFC6CB;
+  --gray-light-40: #CFD4D8;
+  --gray-light-60: #DFE3E5;
+  --gray-light-80: #EFF1F2;
+  --gray-light-90: #F6F7F8;
+  
+  /* OSU Gray Shades */
+  --gray-dark-20: #868E92;
+  --gray-dark-40: #646A6E;
+  --gray-dark-60: #3F4443;
+  --gray-dark-80: #212325;
 }
 
+/* tailwind CSS */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  /* OSU Scarlet */
+  --color-scarlet: var(--scarlet);
+  
+  /* OSU Scarlet Shades*/
+  --color-scarlet-d-4: var(--scarlet-dark-40);
+  --color-scarlet-d-6: var(--scarlet-dark-60);
+
+  /* OSU Gray */
+  --color-gray: var(--gray);
+
+  /* OSU Gray Tints */
+  --color-gray-l-2: var(--gray-light-20);
+  --color-gray-l-4: var(--gray-light-40);
+  --color-gray-l-6: var(--gray-light-60);
+  --color-gray-l-8: var(--gray-light-80);
+  --color-gray-l-9: var(--gray-light-90);
+
+  /* OSU Gray Shades */
+  --color-gray-d-2: var(--gray-dark-20);
+  --color-gray-d-4: var(--gray-dark-40);
+  --color-gray-d-6: var(--gray-dark-60);
+  --color-gray-d-8: var(--gray-dark-80);
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -29,10 +91,8 @@ body {
   font-size: large;
   flex-grow: 1;
   text-align: center;
-  line-height: 2.45rem;
   padding-top: 8px;
   padding-bottom: 8px;
-  height: 3.5rem;
 }
 
 .navbutton:hover {
