@@ -3,6 +3,7 @@ import Image from "next/image";
 import VideoLoop from "../components/videoloop";
 import RollingGallery from "../components/rollinggallery";
 import { Bebas_Neue } from "next/font/google";
+import { useEffect, useState } from "react";
 
 const bebasNeue = Bebas_Neue({
   subsets: ['latin'],
@@ -11,9 +12,24 @@ const bebasNeue = Bebas_Neue({
 
 export default function Home(){
 
+  const [isTitleFull, setIsTitleFull] = useState(true);
+
+  useEffect(() => {
+    document.body.classList.add('overflow-hidden');
+
+    setTimeout(() => {
+      setIsTitleFull(false);
+      document.body.classList.remove('overflow-hidden');
+    }, 5000);
+
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, []);
+
   return (
     <div className="mx-10 text-center">
-      <div className="-mx-10 bg-gray rounded-t-[100] rounded-b-[30] flex flex-col items-center justify-center">
+      <div className={`relative -mx-10 bg-gray rounded-b-[30] flex flex-col items-center justify-center transition-all duration-900 ease-in-out ${isTitleFull ? "-mt-30 z-40 rounded-t-[0]" : "-mt-0 z-0 rounded-t-[100]"} `}>
         <div className={`mx-10 flex flex-row text-scarlet text-center py-5 text-5xl ${bebasNeue.className}`}>
           {/* <div className="w-full flex items-center">
             <Image
@@ -24,11 +40,12 @@ export default function Home(){
               height={50}
             />
           </div> */}
-          <h1 className="flex items-center">
-            From the Shoe to the stratosphere
+          <h1 className={`flex transition-all duration-900 items-center ${isTitleFull ? "min-h-screen" : "min-h-[10px]"}`}>
+            {isTitleFull && "Buckeye Rocketry"}
+            {!isTitleFull && "From the Shoe to the stratosphere"}
           </h1>
         </div>
-        <div className="pb-10 flex items-center justify-center">
+        <div className={`pb-10 flex items-center justify-center ${isTitleFull ? "mt-300" : "mt-0"}`}>
           <VideoLoop/>
         </div>
       </div>

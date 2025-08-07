@@ -28,10 +28,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="hidden md:block md:h-[120px]">
+        <div className="relative z-30 hidden md:block md:h-[120px]">
           <Navbar/>
         </div>
-        {children}
+        <div className="relative">
+          {children}
+        </div>
       </body>
     </html>
   );
