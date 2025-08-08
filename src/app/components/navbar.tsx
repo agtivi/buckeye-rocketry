@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 export default function Navbar() {
     return(
         <nav className={`bg-gray-500/30 w-full fixed top-0 left-0 h-[100px] z-50 font-oswald`}>

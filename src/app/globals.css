@@ -109,3 +109,12 @@ body {
   
   border-top: 25px solid #99a1af;
 }
+
+.footerbutton {
+  cursor:pointer;
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
+}
+
+.footerbutton:hover {
+  color:#A7B1B7
+}

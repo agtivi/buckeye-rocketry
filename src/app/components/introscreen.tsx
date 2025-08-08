@@ -19,11 +19,11 @@ export default function IntroScreen() {
         setTimeout(() => {
             setIsTitleFull2(false);
             document.body.classList.remove('overflow-hidden');
-        }, 6500);
+        }, 6000);
 
         setTimeout(() => {
             setIsTitleFull(false);
-        }, 5500);
+        }, 5000);
 
         return () => {
             document.body.classList.remove('overflow-hidden');
@@ -37,7 +37,7 @@ export default function IntroScreen() {
                     <motion.div
                         initial={{ x: "-150vw" }}
                         animate={isFlying ? { x: "150vw" } : {}}
-                        transition={{ delay: 0.5, duration: 2, ease: "easeInOut" }}
+                        transition={{ delay: 1, duration: 2, ease: "easeInOut" }}
                         style={{ width: "150vw" }}
                         className="absolute left-0 right-0 z-15"
                     >
@@ -52,7 +52,7 @@ export default function IntroScreen() {
                     <motion.div
                         initial={{ clipPath: "inset(0% 0% 0% 0%)" }}
                         animate={{ clipPath: "inset(0% 0% 0% 100%)" }}
-                        transition={{ delay: 1.6, duration: 0.4, ease: "easeInOut" }}
+                        transition={{ delay: 2.1, duration: 0.4, ease: "easeInOut" }}
                         style={{ width: "100vw", overflow: "hidden" }}
                         className={`flex items-center justify-center h-[100vh] absolute left-0 right-0 z-10 bg-gray `}
                     >

@@ -10,16 +10,16 @@ export default function Footer(){
                         <h2 className="text-gray-l-2 font-bebas-neue text-xl">
                             Technical Projects
                         </h2>
-                        <p className="font-oswald">
+                        <p className="footerbutton">
                             R2 Two-Stage
                         </p>
-                        <p className="font-oswald">
+                        <p className="footerbutton">
                             Prometheus
                         </p>
-                        <p className="font-oswald">
+                        <p className="footerbutton">
                             Avionics
                         </p>
-                        <p className="font-oswald">
+                        <p className="footerbutton">
                             Structures
                         </p>
                     </div>
@@ -29,10 +29,10 @@ export default function Footer(){
                         <h2 className="text-gray-l-2 font-bebas-neue text-xl">
                             Outreach
                         </h2>
-                        <p className="font-oswald">
+                        <p className="footerbutton">
                             Media
                         </p>
-                        <p className="font-oswald">
+                        <p className="footerbutton">
                             Our Sponsors
                         </p>
                     </div>
@@ -42,7 +42,7 @@ export default function Footer(){
                         <h2 className="text-gray-l-2 font-bebas-neue text-xl">
                             Leadership
                         </h2>
-                        <p className="font-oswald">
+                        <p className="footerbutton">
                             Current Leads
                         </p>
                     </div>
@@ -52,10 +52,10 @@ export default function Footer(){
                         <h2 className="text-gray-l-2 font-bebas-neue text-xl">
                             New Members
                         </h2>
-                        <p className="font-oswald">
+                        <p className="footerbutton">
                             How to join
                         </p>
-                        <p className="font-oswald">
+                        <p className="footerbutton">
                             Calendar
                         </p>
                     </div>
