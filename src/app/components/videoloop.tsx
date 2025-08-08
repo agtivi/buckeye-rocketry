@@ -7,6 +7,7 @@ const spaceLady = "spacelady.mp4";
 export default function VideoLoop(){
   
     const [vidIndex, setVidIndex] = useState(0);
+    const [visible, setVisible] = useState(false);
 
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
@@ -17,6 +18,12 @@ export default function VideoLoop(){
     }
         setVidIndex(nextIndex);
     };
+
+    useEffect(() => {
+        setTimeout(() => {
+            setVisible(true);
+        }, 5500)
+    })
 
     useEffect(() => {
         const currentVideo = videoRefs.current[vidIndex];
@@ -30,7 +37,7 @@ export default function VideoLoop(){
 
 
     return(
-        <div>
+        <div className={`relative -mx-[40px] z-0 transition-all duration-1500 ${visible ? "opacity-100" : "opacity-0"}`}>
             <video
                 ref={(el) => { videoRefs.current[0] = el; }}
                 style={{ display: vidIndex === 0 ? "block" : "none"}}
