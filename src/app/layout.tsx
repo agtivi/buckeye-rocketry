@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Oswald, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
@@ -44,6 +45,9 @@ export default function RootLayout({
         </div>
         <div className="relative">
           {children}
+        </div>
+        <div className="pt-[10px]">
+          <Footer/>
         </div>
       </body>
     </html>

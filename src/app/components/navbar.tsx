@@ -4,7 +4,7 @@ export default function Navbar() {
     return(
         <nav className={`bg-gray-500/30 w-full fixed top-0 left-0 h-[100px] z-50 font-oswald`}>
             <div className="relative flex flex-row">
-                <div className="transition-all duration-500 ease-in-out min-w-0 md:min-w-40">
+                <div className="transition-all duration-500 ease-in-out min-w-0 lg:min-w-40">
                 </div>
                 <div className="flex-col w-full">
                     <div className="w-full flex justify-center items-center font-bebas-neue text-xl">
@@ -13,8 +13,8 @@ export default function Navbar() {
                         </p>
                     </div>
                     <div className="min-w-100 relative flex flex-1 items-center">
-                        <ul className="w-full flex flex-row bg-gray-d-2 z-10 rounded-full px-[20px]">
-                            <li className="navbutton">
+                        <ul className="rounded-full w-full flex flex-row bg-gray-d-2 z-10 ">
+                            <li className="rounded-l-full navbutton">
                                 Projects
                             </li>
                             <li className="navbutton">
@@ -26,7 +26,7 @@ export default function Navbar() {
                             <li className="navbutton">
                                 New Members
                             </li>
-                            <li className="navbutton">
+                            <li className="rounded-r-full navbutton">
                                 Donate
                             </li>
                         </ul>
@@ -37,7 +37,7 @@ export default function Navbar() {
                         </p>
                     </div>
                 </div>
-                <div className="flex justify-center items-center transition-all duration-500 ease-in-out min-w-0 md:min-w-40">
+                <div className="flex justify-center items-center transition-all duration-500 ease-in-out min-w-0 lg:min-w-40">
                     {/* Maybe have an image here? */}
                     {/* <Image
                         className="rotate-270 p-[8px]"

@@ -1,7 +1,8 @@
 'use client'
+import IntroScreen from "../components/introscreen";
 import VideoLoop from "../components/videoloop";
 import RollingGallery from "../components/rollinggallery";
-import IntroScreen from "../components/introscreen";
+import SponsorDisplay from "../components/sponsordisplay";
 
 export default function Home(){
 
@@ -22,8 +23,12 @@ export default function Home(){
       <h1 className={`py-5 text-5xl font-bebas-neue`}>
         Our Sponsors
       </h1>
-      <div className="py-5">
-        <RollingGallery autoplay={true} pauseOnHover={true} />
+      {/* RollingGallery messes with page size as it rotates (around indices 1-2) when window size is less than large */}
+      <div className="py-5 hidden lg:block">
+        <RollingGallery autoplay={true} pauseOnHover={false} />
+      </div>
+      <div className="py-5 block lg:hidden">
+        <SponsorDisplay/>
       </div>
     </div>
   );
