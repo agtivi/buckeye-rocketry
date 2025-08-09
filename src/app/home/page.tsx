@@ -16,7 +16,7 @@ export default function Home(){
         <h1 className={`text-5xl font-bebas-neue`}>
           About / Mission
         </h1>
-        <p className="px-[10vw] pt-[20px]">
+        <p className="px-[10vw] pt-[20px] font-oswald">
           We started Buckeye Rocketry to give every Ohio State student a clear way into rocketry. All majors can find a spot in our club. Whether you want to learn design, fabrication, propulsion, or even media. We have the tools and people to help you pick it up. Our goals are big, from a two‑stage launch to future high‑altitude projects, and we want anyone who’s excited to jump in and push with us. Grow your skills, add your ideas, and let’s reach higher together.
         </p>
       </div>
