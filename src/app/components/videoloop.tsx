@@ -45,6 +45,7 @@ export default function VideoLoop(){
                 muted
                 playsInline
                 autoPlay
+                preload="auto"
                 onEnded={() => handleVideoEnd(1)}
             />
             <video
@@ -54,6 +55,7 @@ export default function VideoLoop(){
                 muted
                 playsInline
                 autoPlay
+                preload="metadata"
                 onEnded={() => handleVideoEnd(2)}
             />
             <video
@@ -63,6 +65,7 @@ export default function VideoLoop(){
                 muted
                 playsInline
                 autoPlay
+                preload="metadata"
                 onEnded={() => handleVideoEnd(0)}
             />
         </div>

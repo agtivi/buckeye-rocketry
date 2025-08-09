@@ -47,6 +47,7 @@ export default function IntroScreen() {
                         alt="Flying Rocket"
                         height={100}
                         width={100}
+                        priority
                     />
                     </motion.div>
                     <motion.div
