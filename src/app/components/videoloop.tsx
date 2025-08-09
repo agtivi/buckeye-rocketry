@@ -43,6 +43,8 @@ export default function VideoLoop(){
                 style={{ display: vidIndex === 0 ? "block" : "none"}}
                 src={spaceLady}
                 muted
+                playsInline
+                autoPlay
                 onEnded={() => handleVideoEnd(1)}
             />
             <video
@@ -50,6 +52,8 @@ export default function VideoLoop(){
                 style={{ display: vidIndex === 1 ? "block" : "none"}}
                 src={rocketLaunch}
                 muted
+                playsInline
+                autoPlay
                 onEnded={() => handleVideoEnd(2)}
             />
             <video
@@ -57,6 +61,8 @@ export default function VideoLoop(){
                 style={{ display: vidIndex === 2 ? "block" : "none"}}
                 src={rocketInSpace}
                 muted
+                playsInline
+                autoPlay
                 onEnded={() => handleVideoEnd(0)}
             />
         </div>

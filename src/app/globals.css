@@ -111,10 +111,11 @@ body {
 }
 
 .footerbutton {
-  cursor:pointer;
+  cursor: pointer;
+  text-align: left;
   font-family: 'Oswald', Arial, Helvetica, sans-serif;
 }
 
 .footerbutton:hover {
-  color:#A7B1B7
+  color: #A7B1B7
 }

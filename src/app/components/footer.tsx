@@ -3,11 +3,11 @@
 export default function Footer(){
 
     return(
-        <footer className="bg-gray-d-8 h-fit py-[10px] px-[50px]">
+        <footer className="bg-gray-d-8 h-fit py-[10px] sm:px-[50px]">
             <div className="flex text-center items-start justify-center h-fit ">
-                <div className="relative flex justify-center flex-1 h-fit">
+                <div className="relative flex justify-center flex-1 h-fit ">
                     <div className="w-[15vw] flex flex-col items-start">
-                        <h2 className="text-gray-l-2 font-bebas-neue text-xl">
+                        <h2 className="text-gray-l-2 font-bebas-neue text-xl text-left">
                             Technical Projects
                         </h2>
                         <p className="footerbutton">
@@ -26,7 +26,7 @@ export default function Footer(){
                 </div>
                 <div className="relative flex justify-center flex-1 h-fit">
                     <div className="w-[15vw] flex flex-col items-start">
-                        <h2 className="text-gray-l-2 font-bebas-neue text-xl">
+                        <h2 className="text-gray-l-2 font-bebas-neue text-xl text-left">
                             Outreach
                         </h2>
                         <p className="footerbutton">
@@ -39,7 +39,7 @@ export default function Footer(){
                 </div>
                 <div className="relative flex justify-center flex-1 h-fit">
                     <div className="w-[15vw] flex flex-col items-start">
-                        <h2 className="text-gray-l-2 font-bebas-neue text-xl">
+                        <h2 className="text-gray-l-2 font-bebas-neue text-xl text-left">
                             Leadership
                         </h2>
                         <p className="footerbutton">
@@ -49,7 +49,7 @@ export default function Footer(){
                 </div>
                 <div className="relative flex justify-center flex-1 h-fit">
                     <div className="w-[15vw] flex flex-col items-start">
-                        <h2 className="text-gray-l-2 font-bebas-neue text-xl">
+                        <h2 className="text-gray-l-2 font-bebas-neue text-xl text-left">
                             New Members
                         </h2>
                         <p className="footerbutton">
