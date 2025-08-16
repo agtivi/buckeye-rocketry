@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Oswald, Bebas_Neue } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+import Navbar from "./components/navigation/navbar";
+import Footer from "./components/navigation/footer";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
@@ -27,7 +27,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Buckeye Rocketry",
-  description: "Buckeye Rocketry Club website made by Anthony Keller",
+  description: "Ohio State Buckeye Rocketry Club",
 };
 
 export default function RootLayout({
@@ -38,16 +38,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bebasNeue.variable} ${oswald.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${bebasNeue.variable} ${oswald.variable} ${geistSans.variable} ${geistMono.variable} antialiased relative min-h-[100vh]`}
       >
-        <div className="relative z-30 h-[120px]">
-          <Navbar/>
-        </div>
-        <div className="relative">
-          {children}
-        </div>
-        <div className="pt-[10px]">
-          <Footer/>
+        <div className="min-h-[100vh] flex flex-col">
+          <div className="relative z-30 h-[120px]">
+            <Navbar/>
+          </div>
+          <div className="mx-10 relative flex-grow">
+            {children}
+          </div>
+          <div className="">
+            <Footer/>
+          </div>
         </div>
       </body>
     </html>

@@ -37,10 +37,12 @@ export default function VideoLoop(){
 
 
     return(
-        <div className={`relative -mx-[40px] z-0 transition-all duration-1500 ${visible ? "opacity-100" : "opacity-0"}`}>
+        <div className={`relative z-0 transition-all duration-1500 ${visible ? "opacity-100" : "opacity-0"}`}>
+            
             <video
+                className="h-[58vh] md:h-[75vh]"
                 ref={(el) => { videoRefs.current[0] = el; }}
-                style={{ display: vidIndex === 0 ? "block" : "none"}}
+                style={{ objectFit:'cover', objectPosition:'top', width:'100vw', top:0, position: 'relative', display: vidIndex === 0 ? "block" : "none"}}
                 src={spaceLady}
                 muted
                 playsInline
@@ -49,8 +51,9 @@ export default function VideoLoop(){
                 onEnded={() => handleVideoEnd(1)}
             />
             <video
+                className="h-[58vh] md:h-[75vh]"
                 ref={(el) => { videoRefs.current[1] = el; }}
-                style={{ display: vidIndex === 1 ? "block" : "none"}}
+                style={{ objectFit:'cover', objectPosition:'top', width:'100vw', top:0, position: 'relative', display: vidIndex === 1 ? "block" : "none"}}
                 src={rocketLaunch}
                 muted
                 playsInline
@@ -59,8 +62,9 @@ export default function VideoLoop(){
                 onEnded={() => handleVideoEnd(2)}
             />
             <video
+                className="h-[58vh] md:h-[75vh]"
                 ref={(el) => { videoRefs.current[2] = el; }}
-                style={{ display: vidIndex === 2 ? "block" : "none"}}
+                style={{ objectFit:'cover', objectPosition:'top', width:'100vw', top:0, position: 'relative', display: vidIndex === 2 ? "block" : "none"}}
                 src={rocketInSpace}
                 muted
                 playsInline
@@ -68,6 +72,7 @@ export default function VideoLoop(){
                 preload="metadata"
                 onEnded={() => handleVideoEnd(0)}
             />
+            <div className="homescreen-gradient"/>
         </div>
     )
 }

@@ -10,7 +10,6 @@ export default function IntroScreen() {
     const [isFlying, setIsFlying] = useState(false);
 
     useEffect(() => {
-        scrollTo(0,0);
         document.body.classList.add('overflow-hidden');
 
         setIsFlying(true);
@@ -19,11 +18,11 @@ export default function IntroScreen() {
         setTimeout(() => {
             setIsTitleFull2(false);
             document.body.classList.remove('overflow-hidden');
-        }, 6000);
+        }, 5600);
 
         setTimeout(() => {
             setIsTitleFull(false);
-        }, 5000);
+        }, 4600);
 
         return () => {
             document.body.classList.remove('overflow-hidden');
@@ -31,13 +30,13 @@ export default function IntroScreen() {
     }, []);
 
     return (
-        <div className={`absolute min-h-screen -mt-30 md:-mt-0 -mx-10 flex flex-col items-center justify-center transition-all duration-1000 ease-in-out ${isTitleFull ? "opacity-100" : "opacity-0"}`}>
+        <div className={`absolute min-h-screen -mx-10 flex flex-col items-center justify-center transition-all duration-1000 ease-in-out ${isTitleFull ? "opacity-100" : "opacity-0"}`}>
             <div className={`mx-10 flex flex-row text-scarlet text-center py-5 text-5xl font-bebas-neue z-40 ${isTitleFull2 ? "block" : "hidden"}`}>
                 <h1 className={`flex items-center content-center justify-center h-[100vh] absolute left-0 top-0 right-0 z-0 bg-gray transition-all duration-900 items-center `}>
                     <motion.div
                         initial={{ x: "-150vw" }}
                         animate={isFlying ? { x: "150vw" } : {}}
-                        transition={{ delay: 1, duration: 2, ease: "easeInOut" }}
+                        transition={{ delay: 0.6, duration: 2, ease: "easeInOut" }}
                         style={{ width: "150vw" }}
                         className="absolute left-0 right-0 z-15"
                     >
@@ -53,7 +52,7 @@ export default function IntroScreen() {
                     <motion.div
                         initial={{ clipPath: "inset(0% 0% 0% 0%)" }}
                         animate={{ clipPath: "inset(0% 0% 0% 100%)" }}
-                        transition={{ delay: 2.1, duration: 0.4, ease: "easeInOut" }}
+                        transition={{ delay: 1.7, duration: 0.4, ease: "easeInOut" }}
                         style={{ width: "100vw", overflow: "hidden" }}
                         className={`flex items-center justify-center h-[100vh] absolute left-0 right-0 z-10 bg-gray `}
                     >

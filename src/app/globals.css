@@ -89,6 +89,18 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.navtext {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  @media (width >= 40rem){
+    font-size: x-large;
+  }
+  /* background-color: #FFFFFF; */
+}
+
 .navbutton {
   font-size: large;
   flex-grow: 1;
@@ -118,4 +130,15 @@ body {
 
 .footerbutton:hover {
   color: #A7B1B7
+}
+
+
+.homescreen-gradient {
+  height: 3%;
+  width: 100%;
+  background-image: 
+    linear-gradient(to top, var(--background), transparent);
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
