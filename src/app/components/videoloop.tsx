@@ -31,7 +31,7 @@ export default function VideoLoop({showIntro}: Props){
         } else {
             setVisible(true);
         }
-    })
+    }, [showIntro])
 
     useEffect(() => {
         const currentVideo = videoRefs.current[vidIndex];

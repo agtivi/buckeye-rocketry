@@ -15,10 +15,10 @@ export default function R2TwoStage() {
                         <p className="font-oswald text-2xl flex flex-col items-start gap-7 rounded-md bg-gray-d-8 py-3 px-3 w-fit">
                             {/* <span>•</span>  */}
                             <span>
-                                Our R2 Two-Stage will be Buckeye Rocketry's first project with the intention to design, build, and safely fly a two-stage vehicle to achieve a flight of 10,000 ft.
+                                Our R2 Two-Stage will be Buckeye Rocketry&apos;s first project with the intention to design, build, and safely fly a two-stage vehicle to achieve a flight of 10,000 ft.
                             </span>
                             <span>
-                                As our club's maiden voyage, the intention of the project is to give members an opportunity to experience and create a working culture among eachother.
+                                As our club&apos;s maiden voyage, the intention of the project is to give members an opportunity to experience and create a working culture among eachother.
                             </span>
                         </p>
                     </div>

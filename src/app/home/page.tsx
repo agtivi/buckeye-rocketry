@@ -2,7 +2,6 @@
 import IntroScreen from "../components/introscreen";
 import VideoLoop from "../components/videoloop";
 import RollingGallery from "../components/rollinggallery";
-import SponsorDisplay from "../components/sponsordisplay";
 import { useEffect, useState } from "react";
 
 export default function Home(){

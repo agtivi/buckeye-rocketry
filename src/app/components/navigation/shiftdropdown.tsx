@@ -14,10 +14,9 @@ interface NavTab {
 
 interface Props {
     NAV_TABS: NavTab[];
-    dropdownWidth?: number; // dropdown width optional
 }
 
-export default function ShiftingDropDown({ NAV_TABS, dropdownWidth = 200}: Props){
+export default function ShiftingDropDown({ NAV_TABS}: Props){
     const [activeTab, setActiveTab] = useState<number | null>(null);
     const [tabCenter, setTabCenter] = useState(0);
 
