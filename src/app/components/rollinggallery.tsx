@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import {
   motion,
   useMotionValue,
@@ -9,16 +10,17 @@ import {
 } from "framer-motion";
 
 const IMGS: string[] = [
-  "https://images.unsplash.com/photo-1528181304800-259b08848526?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1495103033382-fe343886b671?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1506781961370-37a89d6b3095?q=80&w=3264&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1599576838688-8a6c11263108?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1494094892896-7f14a4433b7a?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://plus.unsplash.com/premium_photo-1664910706524-e783eed89e71?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1503788311183-fa3bf9c4bc32?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  "https://images.unsplash.com/photo-1585970480901-90d6bb2a48b5?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "/sponsors/boeing.png",
+  "/logos/linkedin-logo.png",
+  "/logos/rocketship.png",
+  "/logos/discord-logo.png",
+  "/sponsors/boeing.png",
+  "/sponsors/boeing.png",
+  "/sponsors/boeing.png",
+  // "/sponsors/boeing.png",
+  // "/sponsors/boeing.png",
+  // "/sponsors/boeing.png",
+  // "/sponsors/boeing.png",
 ];
 
 const NAMES: string[] = [
@@ -29,9 +31,10 @@ const NAMES: string[] = [
     "sponsor 5",
     "sponsor 6",
     "sponsor 7",
-    "sponsor 8",
-    "sponsor 9",
-    "sponsor 10",
+    // "sponsor 8",
+    // "sponsor 9",
+    // "sponsor 10",
+    // "sponsor 11",
 ];
 
 interface RollingGalleryProps {
@@ -50,18 +53,20 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
   const galleryImages = images.length > 0 ? images : IMGS;
   const galleryNames = images.length > 0 ? names : NAMES;
 
-  const [isScreenSizeSm, setIsScreenSizeSm] = useState<boolean>(false);
+  const [screenSize, setScreenSize] = useState<number | 0>(0);
   
   useEffect(() => {
-    const handleResize = () => setIsScreenSizeSm(window.innerWidth <= 640);
+    setScreenSize(window.innerWidth);
+
+    const handleResize = () => setScreenSize(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const cylinderWidth: number = isScreenSizeSm ? 1100 : 1800;
+  const cylinderWidth: number = screenSize * 0.5;
   const faceCount: number = galleryImages.length;
   const faceWidth: number = (cylinderWidth / faceCount) * 1.5;
-  const radius: number = cylinderWidth / (1.3 * Math.PI);
+  const radius: number = (cylinderWidth + faceCount * 50) / (1.3 * Math.PI);
 
   const dragFactor: number = 0.001;
   const rotation = useMotionValue(0);
@@ -74,7 +79,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
 
   const startInfiniteSpin = (startAngle: number) => {
     controls.start({
-      rotateY: [startAngle, startAngle - 150],
+      rotateY: [startAngle, startAngle - 360],
       transition: {
         duration: 20,
         ease: "linear",
@@ -132,8 +137,8 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
   };
 
   return (
-    <div className="flex justify-center">
-        <div className="relative h-[500px] sm:min-w-[100px] md:w-[800px]">
+    <div className="flex justify-center py-20 lg:pb-20 min-h-[60px] md:min-h-[200px] lg:min-h-[400px] ">
+        <div className="relative w-[200px] md:w-[500px]">
             
         {// Just shadows on either side of the display box... not needed 
         }
@@ -167,7 +172,7 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
                 width: cylinderWidth,
                 transformStyle: "preserve-3d",
             }}
-            className="flex min-h-[200px] cursor-grab items-center justify-center [transform-style:preserve-3d]"
+            className="flex cursor-grab items-center justify-center [transform-style:preserve-3d]"
             >
             {galleryImages.map((url, i) => (
                 <div
@@ -179,12 +184,15 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
                 }}
                 >
                 <div className="flex-cols-2">
-                    <img
+                    <Image
+                        unoptimized
                         src={url}
                         alt="gallery"
-                        className="pointer-events-none h-[120px] w-[300px] rounded-[15px] border-[3px] border-white object-cover transition-transform duration-300 ease-out group-hover:scale-105 sm:h-[220px] sm:w-[220px]"
+                        height={100}
+                        width={100}
+                        className="pointer-events-none md:scale-130 rounded-[15px] border-[3px] border-white object-cover transition-transform duration-300 ease-out group-hover:scale-105 md:group-hover:scale-140 "
                     />
-                    <p>
+                    <p className="md:pt-5">
                         {`${galleryNames[i]}`}
                     </p>
                 </div>

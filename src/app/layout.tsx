@@ -41,7 +41,7 @@ export default function RootLayout({
         className={`${bebasNeue.variable} ${oswald.variable} ${geistSans.variable} ${geistMono.variable} antialiased relative min-h-[100vh]`}
       >
         <div className="min-h-[100vh] flex flex-col">
-          <div className="relative z-30 h-[120px]">
+          <div className="relative z-30 h-[50px] sm:h-[120px]">
             <Navbar/>
           </div>
           <div className="mx-10 relative flex-grow">

@@ -46,7 +46,7 @@ export default function ShiftingDropDown({ NAV_TABS, dropdownWidth = 200}: Props
                     key={tab.id}
                     id={`nav-tab-${tab.id}`}
                     onMouseEnter={() => handleHover(tab.id)}
-                    className="px-3 py-1 flex-1 text-xl transition-colors"
+                    className="px-3 py-1 flex-1 hover:bg-gray-d-4 hover:text-scarlet rounded-full text-xl transition-colors"
                 >
                     {tab.title}
                 </button>
@@ -69,7 +69,7 @@ export default function ShiftingDropDown({ NAV_TABS, dropdownWidth = 200}: Props
                                 className="w-full h-full bg-white"
                             >
                                 <div
-                                    className="px-3 py-2 hover:text-scarlet hover:bg-gray-d-2/75 rounded-md cursor-pointer"
+                                    className="px-3 py-2 text-scarlet-d-6 hover:text-scarlet hover:bg-gray-d-2/75 rounded-md cursor-pointer"
                                 >
                                         {item.label}
                                 </div>

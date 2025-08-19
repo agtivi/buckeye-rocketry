@@ -7,30 +7,28 @@ export default function Navbar() {
 
     const NAV_TABS = [
         { id: 1, title: "Projects", items: [
-            {label: "Prometheus", link: "/#"}, 
-            {label: "R2 Two-Stage", link: "/#"}, 
-            {label: "Avionics", link: "/#"}, 
-            {label: "Structures", link: "/#"}, 
+            // {label: "Prometheus", link: "/#"}, 
+            {label: "R2 Two-Stage", link: "/r2-two-stage"}, 
+            // {label: "Avionics", link: "/#"}, 
+            // {label: "Structures", link: "/#"}, 
         ] },
         { id: 2, title: "Outreach", items: [
-            {label: "Media", link: "/#"}, 
-            {label: "Our sponsors", link: "/#"},
+            {label: "New Members", link: "/new-members"}, 
+            // {label: "Media", link: "/#"}, 
+            // {label: "Calendar", link: "/#"},
         ] },
         { id: 3, title: "Leadership", items: [
-            {label: "Current leadership", link: "/#"}
+            {label: "Current Leadership", link: "/leadership"}
         ] },
-        { id: 4, title: "Members", items: [
-            {label: "How to join", link: "/new-members"}, 
-            {label: "Calendar", link: "/#"}
-        ] },
-        { id: 5, title: "Resources", items: [
+        { id: 4, title: "Resources", items: [
             {label: "Jobs", link: "/#"}, 
             {label: "Models", link: "/#"}, 
             {label: "Code", link: "/#"}, 
             {label: "Equipment", link: "/#"}, 
         ] },
-        { id: 6, title: "Sponsors", items: [
-            {label: "Become a sponsor", link: "/#"}
+        { id: 5, title: "Sponsors", items: [
+            {label: "Become a Sponsor", link: "/#"},
+            // {label: "Our Sponsors", link: "/#"},
         ] }
     ]
 
@@ -45,9 +43,9 @@ export default function Navbar() {
                     </div>
                     <div className="flex flex-col w-full h-full">
                         <div className="flex flex-1 justify-center items-center font-bebas-neue text-xl drop-shadow-lg">
-                            <p className="ease-in-out text-center text-scarlet w-[230px] py-1 text-3xl bg-gray rounded-t-[50] ">
+                            <Link className="ease-in-out text-center text-scarlet w-[230px] py-1 text-3xl bg-gray rounded-t-[50] " href="/home">
                                 Buckeye Rocketry
-                            </p>
+                            </Link>
                         </div>
                         <div className="relative flex h-full items-center">
                             <ShiftingDropDown NAV_TABS={NAV_TABS} />

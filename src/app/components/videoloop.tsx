@@ -1,10 +1,14 @@
 import { useEffect, useState, useRef } from "react";
 
-const rocketInSpace = "rocketinspace.mp4";
-const rocketLaunch = "rocketlaunch.mp4";
-const spaceLady = "spacelady.mp4";
+const rocketInSpace = "videos/rocketinspace.mp4";
+const rocketLaunch = "videos/rocketlaunch.mp4";
+const spaceLady = "videos/spacelady.mp4";
 
-export default function VideoLoop(){
+interface Props {
+    showIntro: boolean;
+}
+
+export default function VideoLoop({showIntro}: Props){
   
     const [vidIndex, setVidIndex] = useState(0);
     const [visible, setVisible] = useState(false);
@@ -20,9 +24,13 @@ export default function VideoLoop(){
     };
 
     useEffect(() => {
-        setTimeout(() => {
+        if(showIntro){
+            setTimeout(() => {
+                setVisible(true);
+            }, 5500)
+        } else {
             setVisible(true);
-        }, 5500)
+        }
     })
 
     useEffect(() => {
