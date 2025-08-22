@@ -40,6 +40,13 @@ export const Hamburger = ({NAV_TABS}: Props) => {
       >
         <div className="pt-15 px-3">
             <ul className="space-y-2 list-none flex flex-col items-start ">
+                <button key={"home"} className="rounded-md bg-white/5 w-full font-bebas-neue text-2xl py-1 group flex flex-col items-start" onClick={() => handleTabClick(-1)}>
+                    <div className="py-1 w-[90%] flex flex-row items-center">
+                      <span>
+                        <Link className={`pl-2 hover:text-gray-800`} href={"/home"} onClick={(e) => {if(selected === -1) {handleClick();} else {e.preventDefault();}}}>{"Home"}</Link>
+                      </span>
+                    </div>
+                </button>
                 {
                     NAV_TABS.map( tab => ( 
                         <button key={tab.id} className="rounded-md bg-white/5 w-full font-bebas-neue text-2xl py-1 group flex flex-col items-start" onClick={() => handleTabClick(tab.id)}>

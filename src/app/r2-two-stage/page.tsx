@@ -27,7 +27,7 @@ export default function R2TwoStage() {
                 <div className="flex-1">
                     <h1 className="font-bebas-neue text-center text-6xl text-scarlet">Vehicle & Mission Specs</h1>
                 </div>
-                <div className="flex flex-row gap-20 items-center">
+                <div className="flex flex-col lg:flex-row gap-40 sm:gap-20 items-center">
                     <div className="group relative font-oswald items-center h-fit w-fit">
                         <div className="translate-all duration-200 group-hover:scale-105 h-fit w-fit top-0 left-0">
                             <Image
@@ -39,7 +39,7 @@ export default function R2TwoStage() {
                                 width={100}
                             />
                         </div>
-                        <ul className="translate-all duration-200 group-hover:scale-125 absolute bottom-2 right-25 text-xs w-fit h-fit bg-gray-d-8/80 rounded-md py-3 px-3">
+                        <ul className="translate-all duration-200 group-hover:scale-125 absolute -bottom-28 sm:bottom-2 right-0 sm:right-25 text-xs w-full sm:w-fit h-fit bg-gray-d-8/80 rounded-md py-3 px-3">
                             <li className="text-scarlet text-sm bg-gray-l-2/30 w-fit px-1 rounded-md">Vehicle:</li>
                             <li>•&nbsp;Total Impulse: 554 Ns</li>
                             <li>•&nbsp;Estimated Mass: 1.1-1.4 kg</li>
@@ -47,7 +47,7 @@ export default function R2TwoStage() {
                             <li>•&nbsp;Two H Class motors: H45 and H100</li>
                         </ul>
                     </div>
-                    <div className="group relative font-oswald items-center w-fit">
+                    <div className="group relative font-oswald mb-20 sm:pb-0 items-center w-fit">
                         <div className="translate-all duration-200 group-hover:scale-105 h-fit w-fit top-0 left-0">
                             <Image
                                 className="min-w-[460px] lg:w-[960px] rounded-md transition-color duration-200 brightness-95 group-hover:brightness-100"
@@ -58,7 +58,7 @@ export default function R2TwoStage() {
                                 width={100}
                             />
                         </div>
-                        <ul className="translate-all duration-200 group-hover:scale-125 absolute top-12 right-17 text-xs w-fit h-fit bg-gray-d-8/80 rounded-md py-3 px-3">
+                        <ul className="translate-all duration-200 group-hover:scale-125 absolute top-full sm:top-12 right-0 sm:right-17 text-xs w-full sm:w-fit h-fit bg-gray-d-8/80 rounded-md py-3 px-3">
                             <li className="text-scarlet text-sm bg-gray-l-2/30 w-fit px-1 rounded-md">Mission:</li>
                             <li>•&nbsp;Simulated Apogee: 11,837 ft</li>
                             <li>•&nbsp;Target Apogee: 10,000 ft</li>

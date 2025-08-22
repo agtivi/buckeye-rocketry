@@ -185,7 +185,6 @@ const RollingGallery: React.FC<RollingGalleryProps> = ({
                 >
                 <div className="flex-cols-2">
                     <Image
-                        unoptimized
                         src={url}
                         alt="gallery"
                         height={100}

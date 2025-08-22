@@ -19,7 +19,7 @@ export default function NewMembers(){
                     </h1>
                     <div className="flex flex-row gap-10 xxl:gap-20">
                         <div className="flex flex-col pt-10 flex-1 md:px-15 pb-10">
-                            <div className="flex-1 flex flex-row font-oswald text-xlgap-10 lg:gap-30">
+                            <div className="flex-1 flex flex-col sm:flex-row font-oswald text-xlgap-10 lg:gap-30">
                                 <div className="flex-1">
                                     <h2 className="font-bebas-neue text-3xl text-scarlet">
                                         Contact:

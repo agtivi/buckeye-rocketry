@@ -1,5 +1,5 @@
 'use client'
-import IntroScreen from "../components/introscreen";
+// import IntroScreen from "../components/introscreen";
 import VideoLoop from "../components/videoloop";
 import RollingGallery from "../components/rollinggallery";
 import { useEffect, useState } from "react";
@@ -8,14 +8,14 @@ export default function Home(){
 
   const [showIntro, setShowIntro] = useState(false);
 
-  useEffect(() => {
-  const hasVisited = localStorage.getItem("hasVisited");
+  // useEffect(() => {
+  // const hasVisited = localStorage.getItem("hasVisited");
 
-  if (!hasVisited) {
-    setShowIntro(true);
-    localStorage.setItem("hasVisited", "true");
-  }
-  }, []);
+  // if (!hasVisited) {
+  //   setShowIntro(true);
+  //   localStorage.setItem("hasVisited", "true");
+  // }
+  // }, []);
 
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
@@ -27,7 +27,7 @@ export default function Home(){
   {/* Adjust introscreen lengths, first part too long and the second part after the rocket is too short, video too big */}
   return (
     <div className="transition-all duration-500 ease-in-out -mt-30 text-center">
-      {showIntro && <IntroScreen/>}
+      {/* {showIntro && <IntroScreen/>} */}
       <div className={`relative pb-[30px] lg:pb-[0px] flex items-center justify-center -mx-10`}>
         <VideoLoop showIntro={showIntro}/>
       </div>
